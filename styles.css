@@ -1,14 +1,20 @@
 /* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
+   font-family: Poppins, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+
+
   }
   
   /* Body and header styles */
   body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #fffdde;
   }
   
   header {
@@ -37,13 +43,13 @@
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 10px #2f3a35;
   }
   
   .search-input {
     border: none;
     background-color: transparent;
-    padding: 8px 10px;
+    padding: 8px 10px #2f3a35;
     font-size: 16px;
     flex-grow: 1;
   }
@@ -93,7 +99,7 @@
   /* Main navigation styles */
   .main-nav {
     background-color: #2f3a35;
-    padding: 10px 0;
+    padding: 10px #2f3a35 0;
   }
   
   .main-nav ul {
@@ -105,10 +111,65 @@
   .main-nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px #2f3a35 20px;
     font-size: 16px;
   }
   
-  .main-nav a:hover {
+  .main-nav a:hover { 
     background-color: #006400;
   }
+
+
+    /* FROM HERE */
+.container{
+  /* Container is where all fits, the main body after my nav */
+  /* up and left padding */
+  padding: 50px 50px ;
+  text-align: center;
+}
+
+ 
+.container .heading{
+  font-size: 20px; 
+  padding-bottom: 20px;  /* This helps gives space at the bottom btw 'search for' and the search box. */
+}
+
+/* Here I am styling the main square container */
+.container #search-box{ 
+    width: 600px;
+    border-radius: 8px;
+    border: 3px solid #008000;
+    padding: 20px 18px;
+    font-size: 24px;
+}
+
+.container .image-container{
+  display: flex; /* This made the images display side by side*/
+  justify-content: center;
+  flex-wrap: wrap; /* This seem to push the images below from side to side */
+  gap: 20px;  /* There is more space btw images now*/
+  padding-top: 50px;  /* There was space btw the first image and search bar*/
+  padding-bottom: 50px;
+}
+
+
+.container .image-container .image{
+  justify-content: center;
+  background-color: rgb(114, 65, 0);
+  box-shadow: 0 5px 10px #2f3a35;
+  border: 2px solid #3e3e3e00;
+  width: 240px;
+  height: 240px ;
+  border-radius: 8px;
+  margin-top: 80px;  /* There was space btw the first image and search bar*/
+ 
+}
+
+.container .image-container .image img{ 
+  max-width: 240px;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 24px;
+  padding: 25px;
+
+}
