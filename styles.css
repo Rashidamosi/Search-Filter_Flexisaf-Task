@@ -156,20 +156,54 @@
 .container .image-container .image{
   justify-content: center;
   background-color: rgb(114, 65, 0);
-  box-shadow: 0 5px 10px #2f3a35;
+  box-shadow: 0 5px 10px #b5a8a8;
   border: 2px solid #3e3e3e00;
   width: 240px;
   height: 240px ;
   border-radius: 8px;
   margin-top: 80px;  /* There was space btw the first image and search bar*/
- 
+  border-radius: 8px;
+  animation: fadeIn .2s linear ;
+}
+
+/* For the fade in animation part whne u load page */
+@keyframes fadeIn{
+  0%{
+    transform: scale(.5) translateY(-1opx);
+    opacity: 0;
+
+  }
 }
 
 .container .image-container .image img{ 
   max-width: 240px;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* I dont understand what this does*/
   margin-bottom: 24px;
   padding: 25px;
+  border-radius: 8px;
+}
 
+.container .image-container .image h3{
+  font-size: 20px;
+
+}
+
+@media (max-width: 768px) {
+  .container #search-box{ 
+  width: 100px;
+
+  }
+}
+
+
+@media (max-width: 450px) {
+  .container{
+    padding: 25px 20px;
+  }
+
+  .c ontainer .image-container .image{
+  width: 100px;
+
+  }
 }
